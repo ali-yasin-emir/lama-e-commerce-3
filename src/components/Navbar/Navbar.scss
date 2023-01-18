@@ -1,0 +1,107 @@
+.navbar {
+  padding: 0.6em;
+  background: #d3cce3; /* fallback for old browsers */
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  // background: linear-gradient(
+  //   -45deg,
+  //   rgb(103, 58, 183),
+  //   rgb(244, 143, 177),
+  //   rgb(123, 31, 162)
+  // );
+
+  .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .item {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .center {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      @keyframes background-pan {
+        from {
+          background-position: 0% center;
+        }
+
+        to {
+          background-position: -200% center;
+        }
+      }
+      animation: background-pan 3s linear infinite;
+      background-image: linear-gradient(to right, #434343 0%, black 100%);
+
+      // background: rgb(174, 207, 27);
+      // background: linear-gradient(
+      //   90deg,
+      //   rgba(174, 207, 27, 1) 25%,
+      //   rgba(249, 144, 0, 1) 66%,
+      //   rgba(255, 0, 0, 0.5396533613445378) 100%
+      // );
+
+      // background: linear-gradient(
+      //   to right,
+      //   rgb(123, 31, 162),
+      //   rgb(103, 58, 183),
+      //   rgb(244, 143, 177),
+      //   rgb(123, 31, 162)
+      // );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      background-size: 200%;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      .icons {
+        display: flex;
+        gap: 15px;
+        color: gray;
+        cursor: pointer;
+      }
+
+      .cartIcon {
+        position: relative;
+        span {
+          font-size: 12px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #555;
+          color: white;
+          position: absolute;
+          right: -10px;
+          top: -10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
